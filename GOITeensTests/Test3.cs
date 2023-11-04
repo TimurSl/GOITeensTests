@@ -96,7 +96,10 @@ public class Test3
 
 		static float FindClosestPair(float[][] a, float[][] b, int n1, int n2, out int amin, out int bmin)
 		{
-			float r, rmin = (float) Math.Sqrt(Math.Pow(a[0][0] - b[0][0], 2) + Math.Pow(a[0][1] - b[0][1], 2));
+			float f1 = a[0][0] - b[0][0];
+			float d1 = a[0][1] - b[0][1];
+
+			float r, rmin = (float) Math.Sqrt(f1 * f1 + d1 * d1);
 			amin = 0;
 			bmin = 0;
 
@@ -104,7 +107,10 @@ public class Test3
 			{
 				for (int i2 = 0; i2 < n2; i2++)
 				{
-					r = (float) Math.Sqrt(Math.Pow(a[i][0] - b[i2][0], 2) + Math.Pow(a[i][1] - b[i2][1], 2));
+					float f2 = a[i][0] - b[i2][0];
+					float d2 = a[i][1] - b[i2][1];
+
+					r = (float) Math.Sqrt(f2 * f2 + d2 * d2);
 					if (r < rmin)
 					{
 						rmin = r;
