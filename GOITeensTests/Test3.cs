@@ -63,20 +63,11 @@ public class Test3
 		return (c, a, b);
 	}
 
-	public void Proc14()
+	public ((int a, int b, int c), (int a, int b, int c)) Proc14(int a1, int b1, int c1, int a2, int b2, int c2)
 	{
-		for (int i = 0; i <= 1; ++i)
-		{
-			Console.Write("Enter a b c: ");
-			string[]? input = Console.ReadLine ()?.Split(' ');
-			int a = int.Parse(input[0]);
-			int b = int.Parse(input[1]);
-			int c = int.Parse(input[2]);
-
-			(a, b, c) = ShiftRight(a, b, c);
-			Console.WriteLine($"{a} {b} {c}");
-		}
+		return (ShiftRight(a1, b1, c1), ShiftRight(a2, b2, c2));
 	}
+
 
 	public int MinMax17(int[] numbers)
 	{
