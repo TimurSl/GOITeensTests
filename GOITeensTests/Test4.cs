@@ -236,7 +236,7 @@ public class Test4
 		return a;
 	}
 
-	public void Array134(int n, Point[] a)
+	public double Array134(int n, Point[] a)
 	{
 		int a1 = 0;
 		int a2 = 0;
@@ -261,7 +261,15 @@ public class Test4
 			}
 		}
 
-		Console.WriteLine("A  {distance} :\n x: {x}\n y: {y}\n", a1+1, a[a1].X, a[a1].Y);
-		Console.WriteLine("A  {distance} :\n x: {x}\n y: {y}\n", a2+1, a[a2].X, a[a2].Y);
+		return rmax;
+	}
+
+	public string String10(string str)
+	{
+		char[] charArray = str.ToCharArray ();
+
+		Array.Reverse(charArray);
+
+		return new string(charArray);
 	}
 }
