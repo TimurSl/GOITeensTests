@@ -125,6 +125,7 @@ public class Test3
 	}
 
 
+
 	public int[,] Matrix51(int[,] matrix)
 	{
 		int maxI = 0;
@@ -152,13 +153,14 @@ public class Test3
 
 		SwapMatrixRow(matrix, maxI, minI, matrix.GetLength(0));
 
+		return matrix;
+
+
 		static void Swap(ref int x, ref int y)
 		{
 			if (x != y)
 			{
-				x = x + y;
-				y = x - y;
-				x = x - y;
+				(x, y) = (y, x);
 			}
 		}
 
@@ -173,7 +175,6 @@ public class Test3
 			}
 		}
 
-		return matrix;
 	}
 
 	public char[] String4(int n)
