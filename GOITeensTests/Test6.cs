@@ -4,7 +4,7 @@ public class Test6
 {
 	public static int Integer26(int K)
 	{
-		return (K + 1) % 7 == 0 ? 7 : (K + 1) % 7;
+		return K % 7 + 1;
 	}
 
 	public static bool Boolean14(int a, int b, int c)
